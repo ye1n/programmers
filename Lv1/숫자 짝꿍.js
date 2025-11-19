@@ -1,27 +1,36 @@
 function solution(X, Y) {
-  // 같은 숫자를 찾으면 제거하며 공통 숫자를 찾음
-  // 숫자를 내림차순 정렬하여 가장 큰 숫자로 만듬
-  const x = X.split(""); // x = [ '5', '5', '2', '5' ]
-  const y = Y.split(""); // y = [ '1', '2', '5', '5' ]
-  const count = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // 0 ~ 9 까지 개수
-  let numArr = []; // numArr = [5]
-  let answer = "-1"; // answer = 552
+  const x = X.split(""); // [ '5', '5', '2', '5' ]
+  const y = Y.split(""); // [ '1', '2', '5', '5' ]
+  const xCount = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  const yCount = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  const resultCount = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let answer = ""; // 552
 
   for (let i = 0; i < x.length; i++) {
-    if (y.includes(x[i])) {
-      numArr.push(x[i]);
-      // count[x[i]] + 1
-      let yIndex = y.indexOf(x[i]);
-      y.splice(yIndex, 1);
+    xCount[x[i]]++;
+  }
+
+  for (let i = 0; i < y.length; i++) {
+    yCount[y[i]]++;
+  }
+
+  for (let i = 0; i < 10; i++) {
+    if (xCount[i] > 0 && yCount[i] > 0) {
+      if (xCount[i] >= yCount[i]) {
+        resultCount[i] += yCount[i];
+      } else {
+        resultCount[i] += xCount[i];
+      }
     }
   }
 
-  if (numArr.length) {
-    let arr = numArr.sort((a, b) => b - a).join("");
-    answer = arr > 0 ? arr : "0";
+  for (let i = 10; i >= 0; i--) {
+    if (resultCount[i] > 0) {
+      answer += String(i).repeat(resultCount[i]);
+    }
   }
 
-  return answer;
+  return answer === "" ? "-1" : Number(answer) === 0 ? "0" : answer;
 }
 
 console.log(solution("5525", "1255"));

@@ -6,22 +6,20 @@
  */
 function solution(answers) {
   let answer = [];
-  let maxScore = 0;
-  let score = [0, 0, 0];
-
-  let firstPattern = [1, 2, 3, 4, 5];
-  let secondPattern = [2, 1, 2, 3, 2, 4, 2, 5];
-  let thridPattern = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5];
+  let patterns = [
+    [1, 2, 3, 4, 5],
+    [2, 1, 2, 3, 2, 4, 2, 5],
+    [3, 3, 1, 1, 2, 2, 4, 4, 5, 5],
+  ];
+  let score = Array(patterns.length).fill(0);
 
   for (let i = 0; i < answers.length; i++) {
-    const answer = answers[i];
-
-    if (firstPattern[i % firstPattern.length] === answer) score[0]++;
-    if (secondPattern[i % secondPattern.length] === answer) score[1]++;
-    if (thridPattern[i % thridPattern.length] === answer) score[2]++;
+    for (let j = 0; j < patterns.length; j++) {
+      if (patterns[j][i % patterns[j].length] === answers[i]) score[j]++;
+    }
   }
 
-  maxScore = Math.max(...score);
+  let maxScore = Math.max(...score);
 
   for (let i = 0; i < score.length; i++) {
     if (maxScore === score[i]) answer.push(i + 1);

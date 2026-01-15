@@ -7,45 +7,24 @@
 function solution(answers) {
   let answer = [];
   let maxScore = 0;
-  let score = new Map([
-    [1, 0],
-    [2, 0],
-    [3, 0],
-  ]);
+  let score = [0, 0, 0];
 
   let firstPattern = [1, 2, 3, 4, 5];
   let secondPattern = [2, 1, 2, 3, 2, 4, 2, 5];
   let thridPattern = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5];
 
-  let firstAnswer = new Map();
-  let secondAnswer = new Map();
-  let thridAnswer = new Map();
-
-  const getAnswer = (answer, pattern) => {
-    for (let i = 0; i < answers.length; i++) {
-      answer.set(i, pattern[i % pattern.length]);
-    }
-  };
-
-  getAnswer(firstAnswer, firstPattern);
-  getAnswer(secondAnswer, secondPattern);
-  getAnswer(thridAnswer, thridPattern);
-
   for (let i = 0; i < answers.length; i++) {
     const answer = answers[i];
-    if (firstAnswer.get(i) === answer) score.set(1, score.get(1) + 1);
-    if (secondAnswer.get(i) === answer) score.set(2, score.get(2) + 1);
-    if (thridAnswer.get(i) === answer) score.set(3, score.get(3) + 1);
+
+    if (firstPattern[i % firstPattern.length] === answer) score[0]++;
+    if (secondPattern[i % secondPattern.length] === answer) score[1]++;
+    if (thridPattern[i % thridPattern.length] === answer) score[2]++;
   }
 
-  // for (const [key, value] of score) {
-  //   if (maxScore < value) maxScore = value;
-  // }
+  maxScore = Math.max(...score);
 
-  maxScore = Math.max(...score.values());
-
-  for (const [key, value] of score) {
-    if (maxScore === value) answer.push(key);
+  for (let i = 0; i < score.length; i++) {
+    if (maxScore === score[i]) answer.push(i + 1);
   }
 
   return answer;

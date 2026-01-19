@@ -14,37 +14,37 @@ function solution(park, routes) {
   let w = park[0].length;
   let h = park.length;
 
-  m: for (let i = 0; i < w; i++) {
-    const parkY = park[i].split("");
-    for (let j = 0; j < parkY.length; j++) {
-      const parkX = parkY[j];
-      if (parkX === "S") {
-        answer = [i, j];
-        break m;
+  const findStart = () => {
+    for (let i = 0; i < h; i++) {
+      for (let j = 0; j < w; j++) {
+        if (park[i][j] === "S") return [i, j];
       }
     }
-  }
+  };
 
-  mm: for (let i = 0; i < routes.length; i++) {
-    const route = routes[i].split(" ");
+  answer = findStart();
 
-    let y = answer[0];
-    let x = answer[1];
-    let way = route[0];
-    let street = Number(route[1]);
+  const moveRoute = (answer, route) => {
+    let [y, x] = answer;
+    let [way, street] = route.split(" ");
 
-    for (let j = 0; j < street; j++) {
+    for (let j = 0; j < Number(street); j++) {
       if (way === "E") x += 1;
       else if (way === "W") x -= 1;
       else if (way === "S") y += 1;
       else if (way === "N") y -= 1;
 
-      if (y < 0 || y >= h || x < 0 || x >= w || park[y].split("")[x] === "X") {
-        continue mm;
+      if (y < 0 || y >= h || x < 0 || x >= w || park[y][x] === "X") {
+        return;
       }
     }
 
-    answer = [y, x];
+    return [y, x];
+  };
+
+  for (const route of routes) {
+    let newRoute = moveRoute(answer, route);
+    if (newRoute) answer = newRoute;
   }
 
   return answer;

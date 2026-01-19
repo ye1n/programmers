@@ -13,6 +13,12 @@ function solution(park, routes) {
   let answer = [];
   let w = park[0].length;
   let h = park.length;
+  let dir = {
+    E: [0, 1],
+    W: [0, -1],
+    S: [1, 0],
+    N: [-1, 0],
+  };
 
   const findStart = () => {
     for (let i = 0; i < h; i++) {
@@ -29,10 +35,10 @@ function solution(park, routes) {
     let [way, street] = route.split(" ");
 
     for (let j = 0; j < Number(street); j++) {
-      if (way === "E") x += 1;
-      else if (way === "W") x -= 1;
-      else if (way === "S") y += 1;
-      else if (way === "N") y -= 1;
+      let [dirY, dirX] = dir[way];
+      // [y, x] = [y + dirY, x + dirX];
+      y += dirY;
+      x += dirX;
 
       if (y < 0 || y >= h || x < 0 || x >= w || park[y][x] === "X") {
         return;

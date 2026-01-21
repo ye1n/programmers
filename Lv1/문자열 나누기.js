@@ -4,26 +4,22 @@
 function solution(s) {
   let answer = 0;
   let str = "";
-  let thisStrCnt = 0;
-  let diffStrCnt = 0;
+  let ctn = 0;
 
   for (let i = 0; i < s.length; i++) {
     let thisStr = s[i];
 
-    if (thisStrCnt === 0) {
+    if (ctn === 0) {
       str = thisStr;
-      thisStrCnt++;
-    } else if (str === thisStr) {
-      thisStrCnt++;
-    } else if (str !== thisStr) {
-      diffStrCnt++;
+      ctn++;
+    } else {
+      ctn += str === thisStr ? 1 : -1;
     }
 
-    if (thisStrCnt === diffStrCnt || i === s.length - 1) {
+    if (ctn === 0 || i === s.length - 1) {
       answer++;
       str = "";
-      thisStrCnt = 0;
-      diffStrCnt = 0;
+      ctn = 0;
     }
   }
 

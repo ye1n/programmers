@@ -5,20 +5,16 @@ function solution(n) {
   let isPrime = Array(n + 1).fill(true);
   isPrime[0] = isPrime[1] = false;
 
-  const isPrimeChk = (num) => {
-    for (let i = 2; i * i <= num; i++) {
-      if (isPrime[num] && num % i === 0) {
-        isPrime[num] = false;
-        break;
-      }
-    }
-  };
+  for (let i = 2; i * i <= n; i++) {
+    if (!isPrime[i]) continue;
 
-  for (let i = 2; i <= n; i++) {
-    isPrimeChk(i);
+    for (let j = i * i; j <= n; j += i) {
+      if (!isPrime[j]) continue;
+      isPrime[j] = false;
+    }
   }
 
   return isPrime.filter((v) => v).length;
 }
 
-console.log(solution(10));
+console.log(solution(20));

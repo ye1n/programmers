@@ -4,9 +4,9 @@
 function solution(n) {
   let answer = 0;
 
-  const isPrime = (num) => {
-    for (let i = 2; i * i <= num; i++) {
-      if (num % i === 0) return false;
+  const isPrime = (n) => {
+    for (let i = 2; i * i <= n; i++) {
+      if (n % i === 0) return false;
     }
     return true;
   };

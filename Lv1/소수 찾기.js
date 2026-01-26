@@ -2,7 +2,6 @@
  * 소수 찾기
  */
 function solution(n) {
-  let answer = 0;
   let isPrime = Array(n + 1).fill(true);
   isPrime[0] = isPrime[1] = false;
 
@@ -19,9 +18,7 @@ function solution(n) {
     isPrimeChk(i);
   }
 
-  answer = isPrime.filter((v) => v).length;
-
-  return answer;
+  return isPrime.filter((v) => v).length;
 }
 
 console.log(solution(10));

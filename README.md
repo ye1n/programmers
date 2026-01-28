@@ -11,6 +11,7 @@
 - [2016년](https://woooing.tistory.com/31)
 - [공원 산책](https://woooing.tistory.com/29)
 - 과일 장수
+- [기사단원의 무기](https://woooing.tistory.com/41)
 - [달리기 경주](https://woooing.tistory.com/25)
 - [대충 만든 자판](https://woooing.tistory.com/34)
 - [덧칠하기](https://woooing.tistory.com/38)
@@ -27,8 +28,6 @@
 - [햄버거 만들기](https://woooing.tistory.com/26)
 
 ### 풀고 있는 문제
-
-- 기사단원의 무기
 
 ## Lv. 2
 

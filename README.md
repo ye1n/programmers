@@ -8,23 +8,23 @@
 
 ### 푼 문제
 
-- 2016년
-- 공원 산책
+- [2016년](https://woooing.tistory.com/31)
+- [공원 산책](https://woooing.tistory.com/29)
 - 과일 장수
-- 달리기 경주
-- 대충 만든 자판
-- 덧칠하기
-- 둘만의 암호
-- 모의고사
-- 문자열 나누기
+- [달리기 경주](https://woooing.tistory.com/25)
+- [대충 만든 자판](https://woooing.tistory.com/34)
+- [덧칠하기](https://woooing.tistory.com/38)
+- [둘만의 암호](https://woooing.tistory.com/32)
+- [모의고사](https://woooing.tistory.com/27)
+- [문자열 나누기](https://woooing.tistory.com/33)
 - 바탕화면 정리
-- 소수 찾기
+- [소수 찾기](https://woooing.tistory.com/36)
 - 숫자 짝꿍
-- 옹알이
-- 완주하지 못한 선수
+- [옹알이](https://woooing.tistory.com/37)
+- [완주하지 못한 선수](https://woooing.tistory.com/28)
 - 체육복
-- 폰켓몬
-- 햄버거 만들기
+- [폰켓몬](https://woooing.tistory.com/39)
+- [햄버거 만들기](https://woooing.tistory.com/26)
 
 ### 풀고 있는 문제
 

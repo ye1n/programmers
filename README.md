@@ -1,8 +1,10 @@
 # 프로그래머스 코딩테스트
 
+- Language: JavaScript
+
 ## Lv. 0
 
-## Lv.1
+## Lv. 1
 
 ### 푼 문제
 

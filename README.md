@@ -22,7 +22,7 @@
 - 숫자 짝꿍
 - [옹알이](https://woooing.tistory.com/37)
 - [완주하지 못한 선수](https://woooing.tistory.com/28)
-- 체육복
+- [체육복](https://woooing.tistory.com/40)
 - [폰켓몬](https://woooing.tistory.com/39)
 - [햄버거 만들기](https://woooing.tistory.com/26)
 

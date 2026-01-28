@@ -28,6 +28,7 @@
 - 정수 내림차순으로 배치하기
 - 정수 제곱근 판별
 - [체육복](https://woooing.tistory.com/40)
+- 추억 점수
 - [폰켓몬](https://woooing.tistory.com/39)
 - 하샤드 수
 - [햄버거 만들기](https://woooing.tistory.com/26)

@@ -9,6 +9,7 @@
 ### 푼 문제
 
 - [2016년](https://woooing.tistory.com/31)
+- 같은 숫자는 싫어
 - [공원 산책](https://woooing.tistory.com/29)
 - 과일 장수
 - [기사단원의 무기](https://woooing.tistory.com/41)

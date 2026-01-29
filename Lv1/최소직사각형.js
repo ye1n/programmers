@@ -2,8 +2,15 @@
  * 최소직사각형
  */
 function solution(sizes) {
-  var answer = 0;
-  return answer;
+  let walletSize = [0, 0];
+
+  for (const size of sizes) {
+    let [w, h] = size.sort((a, b) => a - b);
+    if (walletSize[0] < w) walletSize[0] = w;
+    if (walletSize[1] < h) walletSize[1] = h;
+  }
+
+  return walletSize[0] * walletSize[1];
 }
 
 console.log(

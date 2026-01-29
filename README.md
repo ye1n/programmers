@@ -22,6 +22,7 @@
 - 바탕화면 정리
 - [소수 찾기](https://woooing.tistory.com/36)
 - 숫자 짝꿍
+- 약수의 합
 - [옹알이](https://woooing.tistory.com/37)
 - [완주하지 못한 선수](https://woooing.tistory.com/28)
 - 자릿수 더하기

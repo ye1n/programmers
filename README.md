@@ -30,6 +30,7 @@
 - 정수 내림차순으로 배치하기
 - 정수 제곱근 판별
 - [체육복](https://woooing.tistory.com/40)
+- 최대공약수와 최소공배수
 - [최소직사각형](https://woooing.tistory.com/43)
 - 추억 점수
 - [폰켓몬](https://woooing.tistory.com/39)
@@ -38,8 +39,6 @@
 - K번째수
 
 ### 풀고 있는 문제
-
-- 최대공약수와 최소공배수
 
 ## Lv. 2
 

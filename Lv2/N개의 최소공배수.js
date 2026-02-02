@@ -2,25 +2,10 @@
  * N개의 최소공배수
  */
 function solution(arr) {
-  let newArr = arr.sort((a, b) => a - b);
-  let max = newArr.pop();
-  let num;
+  const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
+  const lcm = (a, b) => (a * b) / gcd(a, b);
 
-  for (let i = 1; ; i++) {
-    num = max * i;
-    let find = true;
-
-    for (let j = 0; j < newArr.length; j++) {
-      if (num % newArr[j] !== 0) {
-        find = false;
-        break;
-      }
-    }
-
-    if (find) break;
-  }
-
-  return num;
+  return arr.reduce((acc, cur) => lcm(acc, cur));
 }
 
 console.log(solution([2, 6, 8, 14]));

@@ -48,7 +48,7 @@
 - 올바른 괄호
 - 최댓값과 최솟값
 - [카펫](https://woooing.tistory.com/46)
-- H-Index
+- [H-Index](https://woooing.tistory.com/48)
 - [N개의 최소공배수](https://woooing.tistory.com/45)
 
 ### 풀고 있는 문제

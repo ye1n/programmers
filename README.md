@@ -45,6 +45,7 @@
 ### 푼 문제
 
 - [구명보트](https://woooing.tistory.com/47)
+- [기능개발](https://woooing.tistory.com/51)
 - 올바른 괄호
 - 최댓값과 최솟값
 - [카펫](https://woooing.tistory.com/46)
@@ -53,7 +54,6 @@
 
 ### 풀고 있는 문제
 
-- 기능개발
 - 무인도 여행
 - 의상
 - 하노이의 탑

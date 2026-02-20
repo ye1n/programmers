@@ -33,14 +33,13 @@
 - 최대공약수와 최소공배수
 - [최소직사각형](https://woooing.tistory.com/43)
 - 추억 점수
+- 크기가 작은 부분 문자열
 - [폰켓몬](https://woooing.tistory.com/39)
 - 하샤드 수
 - [햄버거 만들기](https://woooing.tistory.com/26)
 - K번째수
 
 ### 풀고 있는 문제
-
-- 크기가 작은 부분 문자열
 
 ## Lv. 2
 
